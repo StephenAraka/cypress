@@ -6,6 +6,10 @@
 describe('Our first suite', () => {
     it('First test', () => {
 
+      cy.visit('/')
+      cy.contains('Forms').click()
+      cy.contains('Form Layouts').click()
+
       // by Tag name
       cy.get('input')
 
@@ -34,7 +38,7 @@ describe('Our first suite', () => {
       cy.get('input[placeholder="Email"]#inputEmail1.input-full-width')
 
       // The most recommended way by cypress - i.e. create your own attributes
-      cy.get('[data-cy="inputEmail1"]')
+      // cy.get('[data-cy="inputEmail1"]')
 
     });
 });
